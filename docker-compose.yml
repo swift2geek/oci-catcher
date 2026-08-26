@@ -1,0 +1,13 @@
+services:
+  catcher:
+    build: .
+    image: oci-catcher
+    container_name: oci-catcher
+    env_file: .env
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      # config должен ссылаться на key_file=/root/.oci/oci_api_key.pem
+      - ./oci:/root/.oci:ro
+    # exit 0 (инстанс создан / уже есть) не перезапускает; фатальная ошибка конфига — максимум 3 рестарта
+    restart: on-failure:3

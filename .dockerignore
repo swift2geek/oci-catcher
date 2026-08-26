@@ -1,0 +1,6 @@
+.git
+.env*
+oci/
+__pycache__/
+.venv/
+*.md
