@@ -4,3 +4,4 @@ oci/
 __pycache__/
 .venv/
 *.md
+oci-*/

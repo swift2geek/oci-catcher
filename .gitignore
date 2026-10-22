@@ -2,3 +2,4 @@
 oci/
 __pycache__/
 .venv/
+oci-*/
